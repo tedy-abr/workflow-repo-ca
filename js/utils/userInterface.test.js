@@ -27,4 +27,9 @@ describe("isActivePath", () => {
     const currentPath = "/login";
     expect(isActivePath(href, currentPath)).toBe(false);
   });
+  test("returns true for an exact path match", () => {
+    const href = "/login";
+    const currentPath = "/login";
+    expect(isActivePath(href, currentPath)).toBe(true);
+  });
 });
